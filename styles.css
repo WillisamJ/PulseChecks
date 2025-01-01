@@ -1,54 +1,44 @@
+/* Styles for the <figure> element */
 figure {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 23%; /* Setting a starter width for everything in the figure section. Can be adjusted if needed */
-
-    border: 2px solid black; /*Adding a black rectangle */
-      
-}
-
-h1 {
-    text-align: center; /*bringing the "Images" title to the top middle */
-    border: 2px solid black; /*Adding another black rectangle */
-      
-      
-    margin-bottom: auto; /*Alligning*/
-}
-.Img1 {
-    border-radius: 10%;
-    width: 200px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    animation: spin 2s linear infinite;
-}
-
-.Img2 {
-  border-radius: 10%;
-    width: 160px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    animation: spin 2s linear infinite;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-likes {
-    
-    border: 2px solid black;
-    margin-right: 100%;
-    margin-bottom: 1%;
-}
-
-@keyframes spin {
-  from {
-      transform: rotate(0deg); /* Start at 0 degrees */
+    display: block;  /* Makes the <figure> element a block-level element */
+    margin: 10px;  /* Adds a margin around the figure */
+    width: 23%;  /* Sets the width of the figure element to 23%, can be adjusted as needed */
+    margin-left: 33%;  /* Centers the figure element horizontally by applying a left margin */
   }
-  to {
-      transform: rotate(360deg); /* End at 360 degrees */
+  
+  /* Styles for the <main> element */
+  main {
+    display: flex;  /* Uses Flexbox layout for the main content */
+    flex-direction: column;  /* Stacks the child elements vertically (default behavior for column) */
+    align-items: center;  /* Centers the child elements horizontally */
+    justify-content: center;  /* Centers the child elements vertically */
+    padding: 10px;  /* Adds padding around the content inside the <main> */
   }
+  
+  /* Styles for the <footer> element */
+  footer {
+    margin-left: 33%;  /* Centers the footer element by applying a left margin */
+  }
+  
+  /* Styles for the <h1> element */
+  h1 {
+    margin-left: 33%;  /* Centers the <h1> title by applying a left margin */
+  }
+  
+  /* Styles for elements with the 'spin-element' class */
+  .spin-element {
+    width: 225px;  /* Sets the width of the spin element */
+    height: 225px;  /* Sets the height of the spin element */
+    background-color: lightblue;  /* Sets the background color of the element to light blue */
+    display: flex;  /* Uses Flexbox to center the content inside */
+    align-items: center;  /* Vertically centers the content inside the spin element */
+    justify-content: center;  /* Horizontally centers the content inside the spin element */
+    margin: 25px auto;  /* Adds a 25px margin above and below, and centers it horizontally */
+    transition: transform 1s;  /* Applies a smooth transition for the transform property over 1 second */
+  }
+  
+  /* Defines the spin effect when the 'spin' class is added */
+  .spin-element.spin {
+    transform: rotate(360deg);  /* Rotates the element by 360 degrees, creating the spinning effect */
+  }
+  

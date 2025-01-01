@@ -2,3 +2,7 @@ September 25, 2024
 "I mainly focused my attention on my two images therefore I was working heavily in my this.css file.
 I was able to accomplish adding a simple spin animation to said images as well as maintaining the sizes while they move.
 I added a little more substance to my comments and I've added two more files called Updates (The one your on now) and Self Info.txt."
+
+December 31, 2024
+"Added a proper like and dislike function for both images while also taking care of the spinning image problem by turning
+them into a clickable event instead."

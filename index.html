@@ -1,53 +1,89 @@
-
 <!DOCTYPE html>
-<!--Using the Doc function starts you off with an html section, head section, and body section-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata for the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on different screen sizes -->
+    <title>Images and Features</title> <!-- Title of the webpage, displayed in the browser tab -->
     
-        
-</head>
-</main>
-    <!--This was put into an h1 element in order to have smaller text in the future.-->
-    <h1>Images!</h1>
-    <!--Creation Of Seperate CSS file for easy accses-->
+    <!-- Link to an external CSS file that styles the webpage -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    </style>
+</head>
+<body>
+
+    <!-- Main header displaying the title of the section -->
+    <h1>Images!</h1>
+
+    <!-- Figure element to group images with captions -->
     <figure>
-        <!--First Image Reference with a class called "Img1". the img src can be replaced with a different url and the width can be adjusted if needed-->
-        <img src="https://th.bing.com/th/id/OIP.0xalclkoGQNyEgvhrwe2kgHaDt?w=280&h=174&c=7&r=0&o=5&pid=1.7" alt="Sample Image" width="300" class="Img1">
-        <!--First Image alternate site link. the href is a the url you go to when the alt is clicked. The alt is text that can be adjusted if needed-->
+        <!-- First Image with a clickable link -->
         <a href="https://chatgpt.com/">
-            <img src="path/to/image.jpg" alt="ObamaVS" width="300">
-
+            <!-- Image of ObamaVS, with an alt text for accessibility, width set to 300px -->
+            <img src="https://th.bing.com/th/id/OIP.0xalclkoGQNyEgvhrwe2kgHaDt?w=280&h=174&c=7&r=0&o=5&pid=1.7" 
+                 alt="ObamaVS" width="300" class="Img1 spin-element" id="spinElement1">
         </a>
-       
-        <!--Second Image Reference. Aside from the class being called "Img2" this can do everything that is stated in line 23-->
-        <img src="https://th.bing.com/th/id/OIP.cuX00XNSPn-rm-kGtKr3tgHaHZ?w=166&h=180&c=7&r=0&o=5&pid=1.7" alt="Ok" width="300" class="Img2">
-        <!--Second Image alternate site link. This can do everything that is stated in line 25-->
+        <!-- Caption for the first image -->
+        <figcaption>ObamaVS</figcaption>
+        
+        <!-- Container for the buttons below the image -->
+        <div id="Obama" class="container">
+            <!-- A set of buttons to interact with the image -->
+            <div class="buttons">
+                <!-- Like button for the first image -->
+                <button id="likeBtn1">👍 Like <span id="likeCount1">0</span></button>
+                <!-- Dislike button for the first image -->
+                <button id="dislikeBtn1">👎 Dislike <span id="dislikeCount1">0</span></button>
+                <!-- Button to trigger the spin animation for the first image -->
+                <button id="spinButton1">Click to Spin</button>
+            </div>
+        </div>
+
+        <!-- Second Image with a clickable link -->
         <a href="https://www.roblox.com/games/8212312901/Froot-Loops-World/">
-
-            <img src="path/to/image.jpg" alt="MR BREAST" width="300">
-
+            <!-- Image of MR BREAST, alt text provided for accessibility, width set to 300px -->
+            <img src="https://th.bing.com/th/id/OIP.cuX00XNSPn-rm-kGtKr3tgHaHZ?w=166&h=180&c=7&r=0&o=5&pid=1.7" 
+                 alt="MR BREAST" width="300" class="spin-element" id="spinElement2">
         </a>
-        <figcaption></figcaption>
+        <!-- Caption for the second image -->
+        <figcaption>MR BREAST</figcaption>
+        
+        <!-- Container for the buttons below the second image -->
+        <div id="Beast" class="container">
+            <!-- A set of buttons to interact with the second image -->
+            <div class="buttons">
+                <!-- Like button for the second image -->
+                <button id="likeBtn2">👍 Like <span id="likeCount2">0</span></button>
+                <!-- Dislike button for the second image -->
+                <button id="dislikeBtn2">👎 Dislike <span id="dislikeCount2">0</span></button>
+                <!-- Button to trigger the spin animation for the second image -->
+                <button id="spinButton2">Click to Spin</button>
+            </div>
+        </div>
     </figure>
-    <form id="feedback-form">
-        <!-- Dropdown to select the type of feedback -->
-        <select id="feedback-type">
-            <option value="General Comment">General Comment</option>
-            <option value="App Enhancement">App Enhancement</option>
-            <option value="General Feedback">General Feedback</option>
-        </select>
-        <!-- Text area for the user to input feedback comments -->
-        <textarea id="comment" placeholder="Enter your feedback here" rows="4"></textarea>
-        <!-- Submit button to send feedback -->
-        <button type="submit">Submit Feedback</button>
-    </form>
-    <!-- Hidden overlay for displaying enlarged images -->
-     <likes>
-    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
 
-</main>
+    <!-- Footer section for additional user input -->
+    <footer>
+        <!-- Label for the dropdown list -->
+        <label for="myDropdown">Choose an option:</label>
+        <!-- Dropdown list where options can be dynamically added -->
+        <select id="myDropdown"></select>
+        
+        <!-- Button that triggers a simple JavaScript alert -->
+        <button type="button" onclick="alert('Hello world!')">Submit</button>
+        
+        <!-- Textarea for user comments -->
+        <textarea name="Comment" id="chat" cols="20" rows="4"></textarea>
+
+        <!-- Paragraph to display the selected option from the dropdown -->
+        <p id="selectedOption"></p>
+    </footer>
+
+    <!-- Link to an external JavaScript file that handles the interactivity -->
+    <script src="app.js"></script>
+
+</body>
 </html>
+
+
+
+ 
