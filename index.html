@@ -2,87 +2,91 @@
 <html lang="en">
 <head>
     <!-- Metadata for the document -->
-    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on different screen sizes -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document to ensure proper rendering of text -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and scales correctly on different screen sizes -->
     <title>Images and Features</title> <!-- Title of the webpage, displayed in the browser tab -->
-    
+
     <!-- Link to an external CSS file that styles the webpage -->
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" /> <!-- The external stylesheet for custom styling of the page -->
 </head>
 <body>
-
-    <!-- Main header displaying the title of the section -->
-    <h1>Images!</h1>
-
-    <!-- Figure element to group images with captions -->
-    <figure>
-        <!-- First Image with a clickable link -->
-        <a href="https://chatgpt.com/">
-            <!-- Image of ObamaVS, with an alt text for accessibility, width set to 300px -->
-            <img src="https://th.bing.com/th/id/OIP.0xalclkoGQNyEgvhrwe2kgHaDt?w=280&h=174&c=7&r=0&o=5&pid=1.7" 
-                 alt="ObamaVS" width="300" class="Img1 spin-element" id="spinElement1">
-        </a>
-        <!-- Caption for the first image -->
-        <figcaption>ObamaVS</figcaption>
+    <!-- Main container for the layout -->
+    <main class="grid-container"> <!-- Using CSS Grid for the main layout -->
         
-        <!-- Container for the buttons below the image -->
-        <div id="Obama" class="container">
-            <!-- A set of buttons to interact with the image -->
-            <div class="buttons">
-                <!-- Like button for the first image -->
-                <button id="likeBtn1">👍 Like <span id="likeCount1">0</span></button>
-                <!-- Dislike button for the first image -->
-                <button id="dislikeBtn1">👎 Dislike <span id="dislikeCount1">0</span></button>
-                <!-- Button to trigger the spin animation for the first image -->
-                <button id="spinButton1">Click to Spin</button>
-            </div>
-        </div>
+        <!-- Header section displaying the title of the section -->
+        <header>
+            <h1>Images!</h1> <!-- The heading of the page, displayed at the top -->
+        </header>
 
-        <!-- Second Image with a clickable link -->
-        <a href="https://www.roblox.com/games/8212312901/Froot-Loops-World/">
-            <!-- Image of MR BREAST, alt text provided for accessibility, width set to 300px -->
-            <img src="https://th.bing.com/th/id/OIP.cuX00XNSPn-rm-kGtKr3tgHaHZ?w=166&h=180&c=7&r=0&o=5&pid=1.7" 
-                 alt="MR BREAST" width="300" class="spin-element" id="spinElement2">
-        </a>
-        <!-- Caption for the second image -->
-        <figcaption>MR BREAST</figcaption>
-        
-        <!-- Container for the buttons below the second image -->
-        <div id="Beast" class="container">
-            <!-- A set of buttons to interact with the second image -->
-            <div class="buttons">
-                <!-- Like button for the second image -->
-                <button id="likeBtn2">👍 Like <span id="likeCount2">0</span></button>
-                <!-- Dislike button for the second image -->
-                <button id="dislikeBtn2">👎 Dislike <span id="dislikeCount2">0</span></button>
-                <!-- Button to trigger the spin animation for the second image -->
-                <button id="spinButton2">Click to Spin</button>
-            </div>
-        </div>
-    </figure>
+        <!-- Section containing images, each with their buttons -->
+        <section class="images-section"> <!-- Section for grouping the images and related content -->
+            
+            <!-- First Image with a clickable link -->
+            <figure class="image-item"> <!-- Figure element used to group the image with its caption -->
+                <!-- The image is wrapped in a link to make it clickable, pointing to an external URL -->
+                <a href="https://chatgpt.com/">
+                    <img src="https://th.bing.com/th/id/OIP.0xalclkoGQNyEgvhrwe2kgHaDt?w=280&h=174&c=7&r=0&o=5&pid=1.7" 
+                         alt="ObamaVS" width="300" class="Img1 spin-element" id="spinElement1"> <!-- Image source, alt text for accessibility, width of 300px -->
+                </a>
+                <figcaption>ObamaVS</figcaption> <!-- Caption for the first image -->
+                <div id="Obama" class="container"> <!-- Container for buttons related to the first image -->
+                    <div class="buttons">
+                        <!-- Button for liking the image -->
+                        <button id="likeBtn1">👍 Like <span id="likeCount1">0</span></button>
+                        <!-- Button for disliking the image -->
+                        <button id="dislikeBtn1">👎 Dislike <span id="dislikeCount1">0</span></button>
+                        <!-- Button for triggering the spin animation on the image -->
+                        <button id="spinButton1">Click to Spin</button>
+                    </div>
+                </div>
+            </figure>
+
+            <!-- Second Image with a clickable link -->
+            <figure class="image-item"> <!-- Another figure element for the second image -->
+                <!-- The image is also wrapped in a clickable link -->
+                <a href="https://www.roblox.com/games/8212312901/Froot-Loops-World/">
+                    <img src="https://th.bing.com/th/id/OIP.cuX00XNSPn-rm-kGtKr3tgHaHZ?w=166&h=180&c=7&r=0&o=5&pid=1.7" 
+                         alt="MR BREAST" width="300" class="spin-element" id="spinElement2"> <!-- Image source and alt text for the second image -->
+                </a>
+                <figcaption>MR BREAST</figcaption> <!-- Caption for the second image -->
+                <div id="Beast" class="container"> <!-- Container for buttons related to the second image -->
+                    <div class="buttons">
+                        <!-- Button for liking the second image -->
+                        <button id="likeBtn2">👍 Like <span id="likeCount2">0</span></button>
+                        <!-- Button for disliking the second image -->
+                        <button id="dislikeBtn2">👎 Dislike <span id="dislikeCount2">0</span></button>
+                        <!-- Button for triggering the spin animation on the second image -->
+                        <button id="spinButton2">Click to Spin</button>
+                    </div>
+                </div>
+            </figure>
+        </section> <!-- End of the images section -->
+
+    </main> <!-- End of the main content container -->
 
     <!-- Footer section for additional user input -->
-    <footer>
-        <!-- Label for the dropdown list -->
+    <footer> <!-- Footer element, typically used for additional content like forms, links, etc. -->
+        <!-- Label for the dropdown menu -->
         <label for="myDropdown">Choose an option:</label>
-        <!-- Dropdown list where options can be dynamically added -->
+        <!-- Dropdown list where options can be dynamically populated by JavaScript -->
         <select id="myDropdown"></select>
         
-        <!-- Button that triggers a simple JavaScript alert -->
+        <!-- Button to submit a simple action (alerts 'Hello world!' when clicked) -->
         <button type="button" onclick="alert('Hello world!')">Submit</button>
         
-        <!-- Textarea for user comments -->
+        <!-- Textarea for the user to enter comments -->
         <textarea name="Comment" id="chat" cols="20" rows="4"></textarea>
-
+        
         <!-- Paragraph to display the selected option from the dropdown -->
         <p id="selectedOption"></p>
     </footer>
 
-    <!-- Link to an external JavaScript file that handles the interactivity -->
-    <script src="app.js"></script>
-
+    <!-- Link to an external JavaScript file that handles interactivity for the page -->
+    <script src="app.js"></script> <!-- The JavaScript file that adds interactivity, such as button clicks and dropdown behavior -->
 </body>
 </html>
+
+
 
 
 
